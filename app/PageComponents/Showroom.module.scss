@@ -43,10 +43,6 @@
     text-align: center;
     filter: opacity(0);
     overflow: hidden;
-    @include screen-tablet-lg {
-      background-color: rgba($color-dark, 0.6);
-      backdrop-filter: blur(25px);
-    }
     @include screen-tablet-sm {
       padding: 1.5rem;
       height: 15rem;
@@ -58,7 +54,7 @@
       background-image: linear-gradient(
         to bottom right,
         rgba($color-dark, 1),
-        rgba($color-med, 0.75)
+        rgba($color-med, 0.95)
       );
       grid-area: glasses;
       @include fadeInRight;
@@ -74,7 +70,7 @@
       background-image: linear-gradient(
         to bottom left,
         rgba($color-dark, 1),
-        rgba($color-med, 0.75)
+        rgba($color-med, 0.95)
       );
       grid-area: jacket;
       @include fadeInLeft;
@@ -91,7 +87,7 @@
       background-image: linear-gradient(
         to bottom right,
         rgba($color-dark, 1),
-        rgba($color-med, 0.75)
+        rgba($color-med, 0.95)
       );
       grid-area: pants;
       @include fadeInRight;
@@ -107,7 +103,7 @@
       background-image: linear-gradient(
         to bottom left,
         rgba($color-dark, 1),
-        rgba($color-med, 0.75)
+        rgba($color-med, 0.95)
       );
       grid-area: shoes;
       @include fadeInLeft;

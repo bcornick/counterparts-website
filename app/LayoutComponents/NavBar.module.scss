@@ -7,13 +7,13 @@
   align-items: center;
   justify-content: center;
   position: fixed;
-  backdrop-filter: blur(7px);
   background-color: transparent;
   transition: all 0.2s;
   z-index: 1000;
   &.scrolled {
     background-color: rgba($color-dark, 0.85);
     box-shadow: 0 1px 15px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(7px);
   }
   .innerNav {
     display: flex;

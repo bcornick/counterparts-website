@@ -31,3 +31,42 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes progressBar {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 50%;
+  }
+  50% {
+    width: 75%;
+  }
+  75% {
+    width: 85%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes cycleText {
+  0% {
+    transform: translateY(0rem);
+  }
+  1% {
+    transform: translateY(-23.6rem);
+  }
+  2% {
+    transform: translateY(-47.2rem);
+  }
+  3% {
+    transform: translateY(-70.8rem);
+  }
+  4% {
+    transform: translateY(-94.4rem);
+  }
+  100% {
+    transform: translateY(-118rem);
+  }
+}

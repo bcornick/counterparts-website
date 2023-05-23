@@ -24,7 +24,7 @@ const FeatureAvatar = ({ avatarSrc }: FeatureAvatarProps) => {
         onEnter={() => {
           setInView(true);
         }}
-        bottomOffset="20%">
+        bottomOffset="30%">
         <Image
           src={avatarSrc}
           alt="counterpart"

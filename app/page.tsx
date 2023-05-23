@@ -7,8 +7,11 @@ import Polygon from './PageComponents/Polygon';
 import Showroom from './PageComponents/Showroom';
 import Waitlist from './PageComponents/Waitlist';
 import radial from '@/public/radial.svg';
+import loadingTimeout from '@/helpers/loadingTimeout';
 
-export default function Home() {
+export default async function Home() {
+  await loadingTimeout(5500);
+
   return (
     <main>
       <Image

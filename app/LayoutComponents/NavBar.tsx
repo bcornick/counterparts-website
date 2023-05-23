@@ -32,14 +32,20 @@ const NavBar = () => {
       case 'wait':
         element = document.getElementById('waitlist');
         yOffset = 100;
-        y = element!.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        window.scrollTo({ top: y, behavior: 'smooth' });
+        if (element) {
+          y =
+            element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
         break;
       case 'learn':
         element = document.getElementById('features');
         yOffset = -50;
-        y = element!.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        window.scrollTo({ top: y, behavior: 'smooth' });
+        if (element) {
+          y =
+            element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
         break;
     }
   };

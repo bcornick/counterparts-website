@@ -2,7 +2,7 @@
 
 import { Audiowide } from 'next/font/google';
 import Image from 'next/image';
-import { Fragment, useState } from 'react';
+import { useState } from 'react';
 import { Waypoint } from 'react-waypoint';
 
 import background from '@/public/wireblob.png';
@@ -80,8 +80,8 @@ const Cards = () => {
           className={
             subInView ? `${styles.fadeIn} ${styles.subText}` : styles.subText
           }>
-          A new digital status symbol <span>more meaningful</span> than a
-          follower count
+          A new digital status symbol that&apos;s <span>more meaningful</span>{' '}
+          than a follower count
         </h3>
       </Waypoint>
       <div className={styles.blobContainer}>

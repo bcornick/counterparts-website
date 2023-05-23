@@ -1,9 +1,7 @@
+import Loader from './PageComponents/Loader';
+
 const Loading = () => {
-  return (
-    <div>
-      <h1>LOADING...</h1>
-    </div>
-  );
+  return <Loader />;
 };
 
 export default Loading;

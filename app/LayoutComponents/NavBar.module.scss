@@ -20,12 +20,11 @@
     align-items: center;
     justify-content: space-between;
     .logoBox {
-      width: 30rem;
-      height: 8rem;
+      width: 35rem;
+      height: $navbar-height;
       position: relative;
       @include screen-tablet-sm {
         width: 50vw;
-        height: $navbar-height;
       }
       @include screen-mobile-lg {
         width: 100%;

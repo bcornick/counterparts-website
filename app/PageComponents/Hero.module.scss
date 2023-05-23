@@ -15,10 +15,9 @@
     width: calc(100vw - $page-margin-small * 2);
   }
   @include screen-tablet-sm {
-    height: 90vh;
+    height: 100vh;
   }
   @include screen-mobile-lg {
-    height: 100vh;
     margin: 0 $page-margin-xsmall;
     width: calc(100vw - $page-margin-xsmall * 2);
   }
@@ -36,13 +35,10 @@
     }
     @include screen-tablet-sm {
       width: 100%;
-    }
-    @include screen-mobile-lg {
       text-align: center;
       align-items: center;
       justify-content: center;
-      gap: 5rem;
-      margin-top: 0;
+      margin-top: 5rem;
     }
     .mainHeader {
       font-size: 7rem;
@@ -56,7 +52,7 @@
         letter-spacing: 1px;
       }
       @include screen-tablet-sm {
-        font-size: 9vw;
+        font-size: 5rem;
       }
       @include screen-mobile-lg {
         font-size: 10vw;
@@ -71,6 +67,11 @@
         line-height: 3.8vw;
       }
       @include screen-tablet-sm {
+        font-size: 3rem;
+        line-height: 4rem;
+        width: 90%;
+      }
+      @include screen-mobile-lg {
         font-size: 2.4rem;
         line-height: 3.8rem;
         width: 90%;

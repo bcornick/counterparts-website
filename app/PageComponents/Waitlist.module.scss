@@ -41,11 +41,10 @@
     height: 35rem;
     padding: 3rem;
     background-image: linear-gradient(
-      to bottom right,
-      rgba($color-med, 0.85),
-      rgba($color-dark, 0.9)
+      to bottom,
+      rgba($color-med, 0.95),
+      rgba($color-dark, 1)
     );
-    backdrop-filter: blur(5px);
     border-radius: $box-border-radius;
     border: 1px solid rgba($color-light, 0.5);
     box-shadow: 0 0 15px rgba($color-light, 0.5);

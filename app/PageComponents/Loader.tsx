@@ -1,19 +1,12 @@
-'use client';
-
 import { Audiowide } from 'next/font/google';
-import Modal from 'react-modal';
 
 import styles from './Loader.module.scss';
 
 const audiowide = Audiowide({ subsets: ['latin'], weight: '400' });
 
-Modal.setAppElement(document.getElementsByTagName('body')[0]);
-
 const Loader = () => {
   return (
-    <Modal
-      isOpen={true}
-      className={styles.loadingOverlay}>
+    <div className={styles.loadingOverlay}>
       <div className={styles.loadingBox}>
         <div className={styles.textBox}>
           <div className={styles.text}>Initializing</div>
@@ -33,7 +26,7 @@ const Loader = () => {
           <div className={styles.color}></div>
         </div>
       </div>
-    </Modal>
+    </div>
   );
 };
 

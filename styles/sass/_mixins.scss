@@ -22,7 +22,6 @@
   &.fadeIn {
     transform: translateX(0);
     filter: opacity(1);
-    backdrop-filter: blur(5px);
   }
 }
 
@@ -33,7 +32,6 @@
   &.fadeIn {
     transform: translateX(0);
     filter: opacity(1);
-    backdrop-filter: blur(5px);
   }
 }
 
@@ -44,7 +42,6 @@
   &.fadeIn {
     transform: translateY(0);
     filter: opacity(1);
-    backdrop-filter: blur(5px);
   }
 }
 

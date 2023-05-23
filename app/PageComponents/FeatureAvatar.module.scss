@@ -1,0 +1,22 @@
+@import '/styles/sass/mixins';
+
+.avatarWrapper {
+  grid-area: avatar;
+  position: relative;
+  @include fadeIn;
+  @include screen-tablet-sm {
+    grid-column: 1 / end;
+    grid-row: 1 / end;
+    z-index: -10;
+  }
+  .avatar {
+    object-fit: contain;
+    filter: saturate(1.2);
+    @include screen-tablet-lg {
+      transform: translateX(-5rem);
+    }
+    @include screen-tablet-sm {
+      transform: translateX(0) scale(1.2);
+    }
+  }
+}

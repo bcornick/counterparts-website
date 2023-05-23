@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 import AnimatedBlob from './AnimatedBlob';
 import blob1 from '@/public/wireblob.png';
 import blob2 from '@/public/wireblob2.png';
@@ -7,6 +5,7 @@ import blob3 from '@/public/wireblob3.png';
 import avatar from '@/public/counterpart-1.png';
 import styles from './Features.module.scss';
 import FeatureText from './FeatureText';
+import FeatureAvatar from './FeatureAvatar';
 
 const features = [
   {
@@ -44,15 +43,7 @@ const Features = () => {
           <FeatureText text={item.featureText} />
         </div>
       ))}
-      <div className={styles.avatarWrapper}>
-        <Image
-          src={avatar}
-          alt="counterpart"
-          fill
-          sizes="25vw"
-          className={styles.avatar}
-        />
-      </div>
+      <FeatureAvatar avatarSrc={avatar} />
     </section>
   );
 };

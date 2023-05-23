@@ -1,0 +1,155 @@
+@import '/styles/sass/mixins';
+@import '/styles/sass/animations';
+
+.heroBox {
+  margin: 0 $page-margin-large;
+  margin-top: $navbar-height;
+  height: fit-content;
+  min-height: 60rem;
+  max-width: $max-page-width;
+  width: calc(100vw - $page-margin-large * 2);
+  position: relative;
+  display: flex;
+  @include screen-tablet-lg {
+    margin: 0 $page-margin-small;
+    width: calc(100vw - $page-margin-small * 2);
+  }
+  @include screen-tablet-sm {
+    height: 90vh;
+  }
+  @include screen-mobile-lg {
+    height: 100vh;
+    margin: 0 $page-margin-xsmall;
+    width: calc(100vw - $page-margin-xsmall * 2);
+  }
+  .leftContent {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 5rem;
+    width: 55vw;
+    max-width: calc($max-page-width * 0.6);
+    @include screen-tablet-lg {
+      margin-top: 10rem;
+      width: 85%;
+      gap: 3rem;
+    }
+    @include screen-tablet-sm {
+      width: 100%;
+    }
+    @include screen-mobile-lg {
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      gap: 5rem;
+      margin-top: 0;
+    }
+    .mainHeader {
+      font-size: 7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      span {
+        font-weight: 300;
+      }
+      @include screen-tablet-lg {
+        font-size: 6rem;
+        letter-spacing: 1px;
+      }
+      @include screen-tablet-sm {
+        font-size: 9vw;
+      }
+      @include screen-mobile-lg {
+        font-size: 10vw;
+      }
+    }
+    .subHeader {
+      width: 70%;
+      font-size: 2.4rem;
+      line-height: 3.8rem;
+      @include screen-tablet-lg {
+        font-size: 3vw;
+        line-height: 3.8vw;
+      }
+      @include screen-tablet-sm {
+        font-size: 2.4rem;
+        line-height: 3.8rem;
+        width: 90%;
+      }
+    }
+  }
+  .rightContent {
+    position: absolute;
+    right: 0;
+    display: flex;
+    bottom: 10px;
+    .cardBox {
+      position: relative;
+      width: 22rem;
+      height: 39rem;
+      position: relative;
+      box-shadow: 0 4px 20px 1px rgba($color-dark, 0.5);
+      border-radius: $box-border-radius;
+      background-color: rgba($color-dark, 0.5);
+      backdrop-filter: blur(5px);
+      overflow: hidden;
+      transition: all 0.5s;
+      @include safari-overflow;
+      &:hover {
+        filter: saturate(1.3);
+      }
+      @include screen-tablet-lg {
+        width: 15vw;
+        height: 26.6vw;
+      }
+      @include screen-tablet-sm {
+        display: none;
+      }
+      &:nth-child(1) {
+        transform: translate(8rem, 6rem);
+        z-index: 2;
+        animation: moveCardDownLeft 0.5s ease-out;
+      }
+      &:nth-child(2) {
+        transform: translate(4rem, 3rem);
+        z-index: 1;
+        .border {
+          animation-delay: 0.5s;
+        }
+      }
+      &:nth-child(3) {
+        animation: moveCardUpRight 0.5s ease-out;
+        .border {
+          animation-delay: 1s;
+        }
+      }
+      .avatarCard {
+        object-fit: cover;
+        border-radius: $box-border-radius;
+        border: solid 2px transparent;
+      }
+      .border {
+        position: absolute;
+        display: block;
+        top: -50%;
+        left: -50%;
+        z-index: -9;
+        display: block;
+        height: 300%;
+        width: 300%;
+        transform: rotate(-45deg);
+        overflow: hidden;
+        background: linear-gradient(
+          to right,
+          rgba($color-dark, 0.75) 20%,
+          rgba($color-dark, 0.75) 40%,
+          $color-light 50%,
+          $color-light 55%,
+          rgba($color-dark, 0.75) 70%,
+          rgba($color-dark, 0.75) 100%
+        );
+        background-size: 300% auto;
+        animation: shine 6s linear infinite reverse;
+      }
+    }
+  }
+}

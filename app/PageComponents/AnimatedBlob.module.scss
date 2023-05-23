@@ -1,0 +1,26 @@
+@import '/styles/sass/mixins';
+
+// some responsive styling is applied within the component
+
+.spline {
+  position: relative;
+  z-index: -1;
+  @include fadeIn;
+  @include screen-tablet-lg {
+    transform: translateX(-55%);
+  }
+  @include screen-tablet-sm {
+    transform: translate(21vw, -10rem);
+  }
+  @include screen-mobile-lg {
+    transform: translate(25vw, -10rem);
+  }
+  .splineObj {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    filter: opacity(0.75) saturate(1.2);
+  }
+}

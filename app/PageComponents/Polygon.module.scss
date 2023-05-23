@@ -1,0 +1,22 @@
+@import '/styles/sass/variables';
+
+.polygon {
+  width: calc($max-page-width + 75rem);
+  position: absolute;
+  z-index: -100;
+  .wrapper {
+    width: calc($max-page-width + 75rem);
+    height: $polygon-height;
+    position: relative;
+    .image {
+      object-fit: contain;
+    }
+  }
+  &:first-of-type {
+    top: 20vh;
+  }
+  &:last-of-type {
+    transform: rotate(180deg);
+    bottom: calc($section-height / 2);
+  }
+}

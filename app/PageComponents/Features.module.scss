@@ -1,0 +1,76 @@
+@import '/styles/sass/mixins';
+
+.featuresBox {
+  display: grid;
+  margin-top: 7rem;
+  grid-template-columns: 4fr 9fr;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-areas:
+    'avatar .'
+    'avatar feature1'
+    'avatar feature1'
+    'avatar feature2'
+    'avatar feature2'
+    'avatar feature3'
+    'avatar feature3'
+    'avatar .';
+  @include screen-tablet-lg {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include screen-tablet-sm {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 10rem);
+    gap: 1rem;
+  }
+  .avatarWrapper {
+    grid-area: avatar;
+    position: relative;
+    @include screen-tablet-sm {
+      grid-column: 1 / end;
+      grid-row: 1 / end;
+      z-index: -10;
+    }
+    .avatar {
+      object-fit: contain;
+      filter: saturate(1.2);
+      @include screen-tablet-lg {
+        transform: translateX(-5rem);
+      }
+      @include screen-tablet-sm {
+        transform: translateX(0) scale(1.2);
+      }
+    }
+  }
+  .feature {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: $content-gap;
+    @include screen-tablet-sm {
+      width: 100%;
+      max-width: 50rem;
+      margin: auto;
+    }
+    &:nth-child(1) {
+      grid-area: feature1;
+      @include screen-tablet-sm {
+        grid-column: 1 / end;
+        grid-row: 3 / 5;
+      }
+    }
+    &:nth-child(2) {
+      grid-area: feature2;
+      @include screen-tablet-sm {
+        grid-column: 1 / end;
+        grid-row: 5 / 7;
+      }
+    }
+    &:nth-child(3) {
+      grid-area: feature3;
+      @include screen-tablet-sm {
+        grid-column: 1 / end;
+        grid-row: 7 / 9;
+      }
+    }
+  }
+}

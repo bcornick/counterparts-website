@@ -1,5 +1,5 @@
 {
-  "name": "intheory-science-avatars",
+  "name": "counterparts-website",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hubspot/api-client": "^8.9.0",
+    "@splinetool/react-spline": "^2.2.6",
     "@types/node": "20.1.7",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
@@ -17,6 +19,9 @@
     "next": "13.4.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-waypoint": "^10.3.0",
+    "sass": "^1.62.1",
+    "sharp": "^0.32.1",
     "typescript": "5.0.4"
   }
 }

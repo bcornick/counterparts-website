@@ -1,0 +1,152 @@
+@import '/styles/sass/mixins';
+
+.cardBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12rem;
+  margin-bottom: 20rem;
+  justify-content: space-between;
+  position: relative;
+  height: $section-height * 1.1;
+  .mainText {
+    font-size: 4.5rem;
+    text-align: center;
+    @include fadeInUp;
+    @include screen-tablet-sm {
+      font-size: 3.6rem;
+      max-width: 55rem;
+      margin-bottom: 7rem;
+    }
+    @include screen-mobile-lg {
+      font-size: 3.4rem;
+    }
+    .counterpart {
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      span {
+        color: $color-light;
+      }
+    }
+  }
+  .cards {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    z-index: 1;
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+      @include fadeIn;
+      &:nth-child(1) {
+        transform: translate(0%, -7rem);
+        .card {
+          border: 1px solid $color-white;
+          box-shadow: 0 0 15px rgba($color-white, 0.5);
+        }
+        .label {
+          color: $color-white;
+        }
+        @include screen-tablet-sm {
+          transform: translate(25%, -15rem);
+        }
+      }
+      &:nth-child(2) {
+        .card {
+          border: 1px solid $color-accent;
+          box-shadow: 0 0 15px rgba($color-accent, 0.5);
+        }
+        .label {
+          color: $color-accent;
+        }
+      }
+      &:nth-child(3) {
+        transform: translate(-0%, 7rem);
+        .card {
+          border: 1px solid $color-light;
+          box-shadow: 0 0 15px rgba($color-light, 0.5);
+        }
+        .label {
+          color: $color-light;
+        }
+        @include screen-tablet-sm {
+          transform: translate(-25%, 15rem);
+        }
+      }
+      .card {
+        position: relative;
+        height: 60rem;
+        width: 33.7rem;
+        border-radius: $box-border-radius;
+        overflow: hidden;
+        @include safari-overflow;
+        transition: all 0.5s;
+        @include screen-tablet-lg {
+          width: 25vw;
+          height: 55vw;
+        }
+        @include screen-tablet-sm {
+          max-height: 60rem;
+          max-width: 33.7rem;
+          width: 33.7vw;
+          height: 60vw;
+        }
+        .cardImage {
+          object-fit: cover;
+        }
+        &:hover {
+          filter: saturate(1.5);
+        }
+      }
+      .label {
+        font-size: 4rem;
+        text-transform: uppercase;
+        @include screen-tablet-sm {
+          font-size: 2.4rem;
+          transform: rotate(-90deg) translate(120%, -20vw);
+        }
+      }
+    }
+  }
+  .subText {
+    font-size: 4.5rem;
+    line-height: 6rem;
+    text-align: center;
+    width: 80%;
+    @include fadeInUp;
+    @include screen-tablet-lg {
+      width: 100%;
+      font-size: 4.1rem;
+    }
+    @include screen-tablet-sm {
+      font-size: 3rem;
+      line-height: 4.5rem;
+      max-width: 70rem;
+    }
+    span {
+      color: $color-light;
+    }
+  }
+  .blobContainer {
+    position: absolute;
+    width: 100%;
+    height: $section-height * 1.1;
+    transition: all 4s;
+    @include screen-tablet-lg {
+      transform: translateY(-5%);
+      width: 200%;
+      max-width: 100rem;
+    }
+  }
+  &:hover {
+    & > .blobContainer {
+      transform: scale(1.2) rotate(15deg);
+      filter: opacity(0.5);
+      @include screen-tablet-lg {
+        transform: none;
+      }
+    }
+  }
+}

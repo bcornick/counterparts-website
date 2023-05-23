@@ -1,0 +1,17 @@
+@import '/styles/sass/mixins';
+
+.spline {
+  position: relative;
+  z-index: -1;
+  transform: translate(8%, calc($section-height / 1.73));
+  @include screen-tablet-lg {
+    transform: translate(5%, calc($section-height / 1.73));
+  }
+  .splineObj {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}

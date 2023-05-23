@@ -1,0 +1,145 @@
+@import '/styles/sass/mixins';
+
+.showroomBox {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr calc($max-page-width / 4) calc($max-page-width / 4) 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas:
+    'glasses avatar avatar .'
+    '. avatar avatar jacket'
+    '. avatar avatar .'
+    'pants avatar avatar .'
+    '. avatar avatar .'
+    '. avatar avatar shoes';
+  @include screen-tablet-lg {
+    grid-template-columns: repeat(8, 1fr);
+  }
+  .avatarBox {
+    position: relative;
+    grid-area: avatar;
+    @include screen-tablet-lg {
+      grid-column: 1 / 9;
+      grid-row: 1 / 7;
+    }
+    .avatar {
+      object-fit: cover;
+      @include screen-tablet-lg {
+        object-fit: contain;
+      }
+    }
+  }
+  .callOut {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 20rem;
+    background-color: rgba($color-dark, 0.5);
+    backdrop-filter: blur(10px);
+    border-radius: $box-border-radius;
+    border: 1px solid rgba($color-light, 0.2);
+    box-shadow: 0 2px 15px rgba($color-dark, 0.5);
+    padding: 2rem;
+    text-align: center;
+    filter: opacity(0);
+    overflow: hidden;
+    @include screen-tablet-lg {
+      background-color: rgba($color-dark, 0.6);
+      backdrop-filter: blur(25px);
+    }
+    @include screen-tablet-sm {
+      padding: 1.5rem;
+      height: 15rem;
+      max-width: 20rem;
+      margin: auto;
+    }
+    @include safari-overflow;
+    &.glasses {
+      grid-area: glasses;
+      @include fadeInRight;
+      @include screen-tablet-lg {
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+      }
+      @include screen-tablet-sm {
+        grid-column: 1 / 5;
+      }
+    }
+    &.jacket {
+      grid-area: jacket;
+      @include fadeInLeft;
+      @include screen-tablet-lg {
+        grid-column: 6 / 9;
+        grid-row: 2 / 3;
+      }
+      @include screen-tablet-sm {
+        grid-column: 5 / 9;
+        grid-row: 3 / 4;
+      }
+    }
+    &.pants {
+      grid-area: pants;
+      @include fadeInRight;
+      @include screen-tablet-lg {
+        grid-column: 1 / 4;
+        grid-row: 4 / 5;
+      }
+      @include screen-tablet-sm {
+        grid-column: 1 / 5;
+      }
+    }
+    &.shoes {
+      grid-area: shoes;
+      @include fadeInLeft;
+      @include screen-tablet-lg {
+        grid-column: 6 / 9;
+        grid-row: 6 / 7;
+      }
+      @include screen-tablet-sm {
+        grid-column: 5 / 9;
+      }
+    }
+    .head {
+      text-transform: uppercase;
+      color: $color-light;
+      font-size: 3.5rem;
+      letter-spacing: 1px;
+      @include screen-tablet-lg {
+        font-size: 3rem;
+        letter-spacing: 0px;
+      }
+    }
+    .text {
+      font-size: 3rem;
+      line-height: 4rem;
+      @include screen-tablet-lg {
+        font-size: 2.8rem;
+        line-height: 3.4rem;
+      }
+      @include screen-tablet-sm {
+        font-size: 2rem;
+        line-height: 3rem;
+      }
+    }
+    .bgContainer {
+      position: absolute;
+      top: 12%;
+      left: 12%;
+      bottom: 12%;
+      right: 12%;
+      .bgBlob {
+        object-fit: contain;
+        z-index: -1;
+        filter: opacity(0);
+        transition: all 0.5s;
+      }
+    }
+    &:hover {
+      & > .bgContainer > .bgBlob {
+        filter: opacity(0.4);
+      }
+    }
+  }
+}

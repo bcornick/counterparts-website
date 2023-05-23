@@ -1,0 +1,84 @@
+@import '/styles/sass/mixins';
+@import '/styles/sass/animations';
+
+.form {
+  position: relative;
+  label {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    color: rgba($color-light, 0.5);
+    font-size: 2.5rem;
+    z-index: -1;
+    @include screen-tablet-sm {
+      font-size: 2rem;
+    }
+  }
+  .emailInput {
+    border: 1px solid $color-light;
+    border-right: none;
+    color: $color-light;
+    font-size: 2.5rem;
+    padding: 2rem;
+    border-radius: $box-border-radius 0 0 $box-border-radius;
+    background-color: rgba($color-dark, 0.4);
+    @include screen-tablet-sm {
+      font-size: 2rem;
+      padding: 1.6rem;
+    }
+    &.errorInput {
+      color: $color-accent;
+      border: 1px solid $color-accent;
+    }
+    &:focus {
+      outline: 1px solid rgba($color-white, 0.75);
+      border: 1px solid transparent;
+    }
+  }
+  .submitBtn {
+    position: relative;
+    border: 1px solid $color-light;
+    background-color: $color-light;
+    color: transparent;
+    border-left: none;
+    font-size: 2.5rem;
+    padding: 2rem;
+    filter: opacity(0.8);
+    border-radius: 0 $box-border-radius $box-border-radius 0;
+    transition: all 0.3s;
+    @include screen-tablet-sm {
+      font-size: 2rem;
+      padding: 1.6rem;
+    }
+    &.errorBtn {
+      border: 1px solid $color-accent;
+      background-color: $color-accent;
+    }
+    &:active {
+      filter: opacity(0.7);
+    }
+    &:hover {
+      cursor: pointer;
+      filter: opacity(1);
+    }
+    &:disabled {
+      filter: opacity(0.4);
+      &:hover {
+        cursor: default;
+      }
+    }
+    .arrow,
+    .check,
+    .error,
+    .pending {
+      padding: 10px;
+      transition: all 0.3s linear;
+      animation: fullRotation 0.3s linear;
+    }
+    &:not([disabled]) {
+      .arrow {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}

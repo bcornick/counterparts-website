@@ -1,0 +1,83 @@
+@import '/styles/sass/variables';
+
+@mixin safari-overflow {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+}
+
+@mixin fadeIn {
+  filter: opacity(0);
+  transition: all $fade-in-duration;
+  &.fadeIn {
+    filter: opacity(1);
+  }
+}
+
+@mixin fadeInLeft {
+  filter: opacity(0);
+  transform: translateX(50rem);
+  transition: all $fade-in-duration;
+  &.fadeIn {
+    transform: translateX(0);
+    filter: opacity(1);
+  }
+}
+
+@mixin fadeInRight {
+  filter: opacity(0);
+  transform: translateX(-50rem);
+  transition: all $fade-in-duration;
+  &.fadeIn {
+    transform: translateX(0);
+    filter: opacity(1);
+  }
+}
+
+@mixin fadeInUp {
+  filter: opacity(0);
+  transform: translateY(20rem);
+  transition: all $fade-in-duration;
+  &.fadeIn {
+    transform: translateY(0);
+    filter: opacity(1);
+  }
+}
+
+// Breakpoints
+@mixin screen-desktop-md {
+  @media (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin screen-desktop-sm {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin screen-tablet-lg {
+  @media (max-width: 999px) {
+    @content;
+  }
+}
+
+@mixin screen-tablet-sm {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin screen-mobile-lg {
+  @media (max-width: 425px) {
+    @content;
+  }
+}
+
+@mixin screen-mobile-sm {
+  @media (max-width: 375px) {
+    @content;
+  }
+}

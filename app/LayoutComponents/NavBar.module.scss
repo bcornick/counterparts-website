@@ -1,0 +1,78 @@
+@import '/styles/sass/mixins';
+
+.navBox {
+  width: 100vw;
+  height: $navbar-height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  backdrop-filter: blur(7px);
+  background-color: transparent;
+  transition: all 0.2s;
+  z-index: 1000;
+  &.scrolled {
+    background-color: rgba($color-dark, 0.85);
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.35);
+  }
+  .innerNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logoBox {
+      width: 30rem;
+      height: 8rem;
+      position: relative;
+      @include screen-tablet-sm {
+        width: 50vw;
+        height: $navbar-height;
+      }
+      @include screen-mobile-lg {
+        width: 100%;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+      .logo {
+        object-fit: contain;
+      }
+    }
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 8rem;
+      font-size: 1.8rem;
+      line-height: 3rem;
+      @include screen-tablet-lg {
+        gap: 4rem;
+      }
+      .link {
+        // padding: 0 2rem;
+        // transition: all 0.2s;
+        // &:hover {
+        //   cursor: pointer;
+        //   filter: opacity(0.75);
+        // }
+        @include screen-tablet-sm {
+          display: none;
+        }
+      }
+      .button {
+        color: $color-light;
+        background-color: rgba($color-light, 0.15);
+        border: 1px solid rgba($color-light, 0.25);
+        border-radius: $btn-border-radius;
+        padding: 0.5rem 2rem;
+        transition: all 0.2s;
+        &:hover {
+          cursor: pointer;
+          filter: opacity(0.75);
+          transform: translateY(1px);
+        }
+        @include screen-mobile-lg {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@keyframes shine {
+  to {
+    background-position: 300% center;
+  }
+}
+
+@keyframes moveCardDownLeft {
+  from {
+    transform: translate(26rem, 3rem);
+  }
+  to {
+    transform: translate(8rem, 6rem);
+  }
+}
+
+@keyframes moveCardUpRight {
+  from {
+    transform: translate(-18rem, 5rem);
+  }
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes fullRotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -11,23 +11,28 @@ import loadingTimeout from '@/helpers/loadingTimeout';
 
 export default async function Home() {
   await loadingTimeout(5500);
+  const loaded = true;
 
   return (
-    <main>
-      <Image
-        src={radial}
-        alt=""
-        width={2000}
-        height={40}
-        style={{ position: 'absolute' }}
-      />
-      <Hero />
-      <Features />
-      <Cards />
-      <Showroom />
-      <Waitlist />
-      <Polygon />
-      <Polygon />
-    </main>
+    <>
+      {loaded && (
+        <main>
+          <Image
+            src={radial}
+            alt=""
+            width={2000}
+            height={40}
+            style={{ position: 'absolute' }}
+          />
+          <Hero />
+          <Features />
+          <Cards />
+          <Showroom />
+          <Waitlist />
+          <Polygon />
+          <Polygon />
+        </main>
+      )}
+    </>
   );
 }

@@ -10,7 +10,7 @@ import FeatureAvatar from './FeatureAvatar';
 const features = [
   {
     splineCode: 'lTilo2q0ucCauMpL',
-    featureText: 'Create an avatar of your likeness using generative AI',
+    featureText: 'Create a 3D avatar of your likeness using generative AI',
     staticBlob: blob1,
   },
   {

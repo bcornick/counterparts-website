@@ -52,7 +52,7 @@ const Footer = () => {
         </li>
         <li className={styles.social}>
           <a
-            href="/"
+            href="https://github.com/bcornick/counterparts-website"
             rel="noreferrer"
             target="_blank"
             className={styles.iconBox}>

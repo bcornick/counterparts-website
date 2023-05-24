@@ -23,5 +23,10 @@
     "sass": "^1.62.1",
     "sharp": "^0.32.1",
     "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.23",
+    "postcss-cli": "^10.1.0"
   }
 }

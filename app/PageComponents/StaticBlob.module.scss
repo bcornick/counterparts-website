@@ -1,5 +1,8 @@
 .blob {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   filter: opacity(0.25) saturate(1.8);
   z-index: -1;
 }
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL1N0YXRpY0Jsb2IubW9kdWxlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxzQkFBbUI7S0FBbkIsbUJBQW1CO0VBQ25CLG1DQUFtQztFQUNuQyxXQUFXO0FBQ2IiLCJmaWxlIjoiU3RhdGljQmxvYi5tb2R1bGUuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5ibG9iIHtcbiAgb2JqZWN0LWZpdDogY29udGFpbjtcbiAgZmlsdGVyOiBvcGFjaXR5KDAuMjUpIHNhdHVyYXRlKDEuOCk7XG4gIHotaW5kZXg6IC0xO1xufVxuIl19 */

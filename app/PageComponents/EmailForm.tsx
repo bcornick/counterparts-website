@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { useState, ChangeEvent } from 'react';
+import { useState, ChangeEvent, MouseEvent } from 'react';
 import { Exo_2 } from 'next/font/google';
 
 import arrow from '@/public/arrow.svg';
@@ -24,11 +24,11 @@ const EmailForm = () => {
     setValid(emailRegex.test(inputValue));
   };
 
-  const handleSubmit = async (e: MouseEvent) => {
+  const handleSubmit = async (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     setPending(true);
     try {
-      const response = await fetch('/waitlist', {
+      const response = await fetch('/api/waitlist', {
         method: 'POST',
         body: JSON.stringify({
           email: email,
@@ -37,7 +37,6 @@ const EmailForm = () => {
           'Content-Type': 'application/json',
         },
       });
-
       if (response.ok) {
         setSubmitted(true);
         setError(false);
@@ -48,7 +47,6 @@ const EmailForm = () => {
     } catch {
       setError(true);
     }
-
     setPending(false);
   };
 
@@ -78,9 +76,7 @@ const EmailForm = () => {
           className={
             error ? `${styles.submitBtn} ${styles.errorBtn}` : styles.submitBtn
           }
-          onClick={() => {
-            handleSubmit;
-          }}
+          onClick={handleSubmit}
           disabled={!email || !valid || submitted || pending}>
           {!submitted && !error && !pending && (
             <Image

@@ -1,7 +1,7 @@
 declare global {
   namespace NodeJS {
     interface ProcessEnv {
-      HUBSPOT_TOKEN: string;
+      HUBSPOT_CRM_TOKEN: string;
     }
   }
 }

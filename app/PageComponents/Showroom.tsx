@@ -52,7 +52,7 @@ const Showroom = () => {
           src={size.width && size.width > 768 ? avatar : avatarNarrow}
           alt="counterpart"
           fill
-          sizes="30vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className={styles.avatar}
         />
         {size.width && size.width > 768 && (
@@ -82,7 +82,7 @@ const Showroom = () => {
                   src={callout.bg}
                   alt=""
                   fill
-                  sizes="10vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className={styles.bgBlob}
                 />
               </div>

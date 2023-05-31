@@ -22,7 +22,7 @@ const Waitlist = () => {
         src={counterparts}
         alt="counterparts"
         fill
-        sizes="90vw"
+        sizes="100vw"
         className={styles.groupImage}
       />
       <Waypoint

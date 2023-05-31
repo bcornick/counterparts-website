@@ -29,7 +29,7 @@ const FeatureAvatar = ({ avatarSrc }: FeatureAvatarProps) => {
           src={avatarSrc}
           alt="counterpart"
           fill
-          sizes="25vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className={styles.avatar}
         />
       </Waypoint>

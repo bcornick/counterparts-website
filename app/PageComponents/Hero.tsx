@@ -30,7 +30,7 @@ const Hero = () => {
               src={card}
               alt="avatar-card"
               fill
-              sizes="15vw"
+              sizes="33vw"
               className={styles.avatarCard}
             />
             <div className={styles.border}></div>

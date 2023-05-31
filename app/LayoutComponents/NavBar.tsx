@@ -64,7 +64,7 @@ const NavBar = () => {
             src={logo}
             alt="Counterparts"
             fill
-            sizes="15vw"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             priority
             onClick={() => {
               scrollToPos('top');

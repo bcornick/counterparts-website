@@ -1,9 +1,9 @@
 'use client';
 
 import { Audiowide } from 'next/font/google';
+import { useEffect, useState } from 'react';
 
 import styles from './Loader.module.scss';
-import { useEffect, useState } from 'react';
 
 const audiowide = Audiowide({ subsets: ['latin'], weight: '400' });
 

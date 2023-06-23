@@ -6,8 +6,7 @@ const StartBtn = () => {
   const scrollToPos = () => {
     const yOffset = -20;
     const element = document.getElementById('features');
-    const y =
-      element!.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    const y = element!.getBoundingClientRect().top + scrollY + yOffset;
     window.scrollTo({ top: y, behavior: 'smooth' });
   };
 
